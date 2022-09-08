@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+<br>
+<body>
+   <center>
+    <h2>Laporan Kas Bulanan</h2>
+   </center>
+
+<!-- Example single danger button -->
+<div class = "container">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Lihat Laporan
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/laporan">Mingguan</a></li>
+      <li><a class="dropdown-item" href="/bulanan">Bulanan</a></li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  
+     <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Uraian</th>
+            <th scope="col">Tanggal Transaksi</th>
+            <th scope="col">Status</th>
+            <th scope="col">Nominal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for d in data %}
+          <tr>
+            <th scoope="row">{{forloop.counter}}</th>
+            <td><a href="{% url 'detail' d.id %}" style="color: black;">{{d.Uraian}}</a></td>
+
+            <td>{{d.Tanggal_Transaksi}}</td>
+            <td>{{d.Status}}</td>
+            <td>Rp. {{d.Nominal | intcomma}}</td>
+  
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+  
+    </form>
+   </div>
+   </body>
+
+{% endblock %}

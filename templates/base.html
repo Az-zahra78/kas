@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=cen, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'dashboard' %}">
+        <img src="/static/images/kaligrafi2.png" alt="" width="78" height="78" class="d-inline-block rounded-circle">
+
+
+
+        <img src="/static/images/hlmnUT.png" alt="" width="78" height="78" class="d-inline-block">
+          Halaman Utama
+        </a> 
+
+      <a class="navbar-brand" href="{% url 'transaksi' %}">
+      <img src="/static/images/transaksi.png" alt="" width="78" height="78" class="d-inline-block">
+        Transaksi
+      </a> 
+  
+      <a class="navbar-brand" href="{% url 'laporan' %}">
+      <img src="/static/images/laporan.png" alt="" width="78" height="78" class="d-inline-block">
+        Laporan
+      </a>
+  
+      <a class="navbar-brand" href="{% url 'saldo' %}">
+      <img src="/static/images/saldo.png" alt="" width="78" height="78" class="d-inline-block">
+        Saldo
+      </a>
+  
+    </div>
+  </nav>
+  <br>
+  <br>
+
+
+<center>
+  <img src="/static/images/coba3.png" alt="..." width="200" class="rounded-circle mx-auto d-block img-thumbnail ">
+</center>
+{% block content %}
+{% endblock %}
+<script>
+  
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"></script>
+
+</body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0d60fd" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,245.3C640,235,800,181,960,176C1120,171,1280,213,1360,234.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+<!-- footer -->
+<footer class="bg-primary text-white text-center">
+  <p>Created with love by <a href="https://www.instagram.com/zahra_al_ihwan/" class="text-white">Fathimah Azzahra</a></p>
+</footer>
+<!-- akhir footer -->
+</html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<center>
+    <h1>Detail Transaksi</h1>
+</center>
+<br>
+<br>
+<br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mx auto">
+                <img src="/{{data.Image}}" alt="..." width="190">
+            </div>
+            <div class="col-3">
+                <p>Uraian</p>
+                <p>Tanggal Transaksi</p>
+                <p>Status</p>
+                <p>Nominal</p>
+            </div>
+            <div class="col-3">
+                <p>: {{data.Uraian}}</p>
+                <p>: {{data.Tanggal_Transaksi}}</p>
+                <p>: {{data.Status}}</p>
+    
+                <p>: Rp. {{data.Nominal}}</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    
+    <center><a class="btn btn-primary" href="/bulanan" role="button">Kembali</a></center>
+{% endblock %}

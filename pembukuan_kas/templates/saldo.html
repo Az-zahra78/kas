@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<center>
+    <h1>SALDO AKHIR</h1>
+</center>
+<br>
+
+
+<div class="container">
+    <h3>Pemasukan</h3><br />
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tanggal Transaksi</th>
+                <th scope="col">Nominal</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in dataDebit %}
+
+            <tr>
+                <th>{{d.Tanggal_Transaksi}}</td>
+                <td>
+                    <a href="/detail/{{d.id}}" style="color: black;">Rp. {{d.Nominal }}</a>
+                </td>
+                <td></td>
+            </tr>
+
+            {% endfor %}
+
+            <tr>
+                <th colspan="2">Total Pemasukan</th>
+                <td>Rp. {{total_debit}}</td>
+            </tr>
+
+        </tbody>
+       
+    </table>
+    
+</div>
+
+<br>
+<div class="container">
+    <h3>Pengeluaran</h3><br />
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tanggal Transaksi</th>
+                <th scope="col">Nominal</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in dataKredit %}
+
+            <tr>
+                <th>{{d.Tanggal_Transaksi}}</td>
+                <td>
+                    <a href="/detail/{{d.id}}" style="color: black;">Rp. {{d.Nominal }}</a>
+                </td>
+                <td></td>
+            </tr>
+
+            {% endfor %}
+
+            <tr>
+                <th colspan="2">Total Pengeluaran</th>
+                <td>Rp. {{total_kredit}}</td>
+            </tr>
+
+        </tbody>
+       
+    </table>
+    
+</div>
+
+<br>
+<div class="container">
+    <h3>Pengeluaran</h3><br />
+
+
+    <table class="table">
+
+        <tbody>
+           
+
+            <tr>
+                <th colspan="3">Saldo Akhir</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Rp. {{saldo}}</td>
+            </tr>
+
+        </tbody>
+       
+    </table>
+    <br>
+    <br>
+
+    
+</div>
+
+
+   
+
+
+
+
+{% endblock %}

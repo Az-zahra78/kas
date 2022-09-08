@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <br>
+    <br>
+    <h1>
+        <center>
+            TRANSAKSI
+        </center>
+    </h1>
+   
+
+    <div class="container">
+            
+        <form method="post" class="row g-3 ms-5  ps-5 " enctype="multipart/form-data">
+
+            {%csrf_token  %}
+            <div class="col-8 ms-5 ps-5">
+                <label for="inputBuktiTransaksi" class="form-label">Bukti Transaksi</label>
+                <input type="file" class="form-control" id="inputBuktiTransaksi" placeholder="1234 Main St" name="Image">
+            </div>
+    
+    
+        
+        <div class="col-8 ms-5 ps-5">
+            <label for="inputUraian" class="form-label">Uraian</label>
+            <input type="text" class="form-control" id="inputUraian" placeholder="1234 Main St" name="Uraian" required>
+        </div>
+        
+        <div class="col-8 ms-5 ps-5">
+            <label for="inputTanggalTransakdi" class="form-label">Tanggal Transaksi</label>
+            <input type="date" class="form-control" id="inputTanggalTransakdi" name = Tanggal_Transaksi required>
+        </div>
+
+        <div class="col-8 ms-5 ps-5">
+            <label for="status" class="form-label">Status</label>
+            
+                <div class="form-check-inline ms-2" >
+                    <input class="form-check-input" type="radio" name= "Status" id="gridRadios1" value="Kredit"
+                        checked >
+                    <label class="form-check-label" for="gridRadios1">
+                        Kredit/Pengeluaran
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="Status" id="gridRadios2" value="Debit" name = Status>
+                    <label class="form-check-label" for="gridRadios2">
+                        Debit/Pemasukan
+                    </label>
+                </div>
+            </lebel>
+        </div>
+
+        <div class="col-8 ms-5 ps-5">
+            <label for="inputUraian" class="form-label">Nominal</label>
+            <input type="number" class="form-control" id="inputNominal" placeholder="1234 Main St" name="Nominal" required>
+        </div> <br>
+        <br>
+        
+       
+        <div class="container ">
+            
+            <div class="col-12 mx-5 ps-5">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+       
+            
+    
+
+
+
+       
+    </form>
+</div>
+  
+
+  
+</body>
+
+{% endblock %}
